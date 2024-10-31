@@ -50,22 +50,22 @@ resource "aws_route_table" "pharma_public" {
   }
 }
 
-resource "aws_route_table_association" "pharma_private-us-east-1a" {
-  subnet_id      = aws_subnet.pharma_private-us-east-1a.id
+resource "aws_route_table_association" "pharma_private-us-west-2a" {
+  subnet_id      = aws_subnet.pharma_private-us-west-2a.id
   route_table_id = aws_route_table.pharma_private.id
 }
 
-resource "aws_route_table_association" "pharma_private-us-east-1b" {
-  subnet_id      = aws_subnet.pharma_private-us-east-1b.id
+resource "aws_route_table_association" "pharma_private-us-west-2b" {
+  subnet_id      = aws_subnet.pharma_private-us-west-2b.id
   route_table_id = aws_route_table.pharma_private.id
 }
 
-resource "aws_route_table_association" "pharma_public-us-east-1a" {
-  subnet_id      = aws_subnet.pharma_public-us-east-1a.id
+resource "aws_route_table_association" "pharma_public-us-west-2a" {
+  subnet_id      = aws_subnet.pharma_public-us-west-2a.id
   route_table_id = aws_route_table.pharma_public.id
 }
 
-resource "aws_route_table_association" "pharma_public-us-east-1b" {
-  subnet_id      = aws_subnet.pharma_public-us-east-1b.id
+resource "aws_route_table_association" "pharma_public-us-west-2b" {
+  subnet_id      = aws_subnet.pharma_public-us-west-2b.id
   route_table_id = aws_route_table.pharma_public.id
 }
