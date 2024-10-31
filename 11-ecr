@@ -1,0 +1,10 @@
+resource "aws_ecr_repository" "pharam_ecr_repo" {
+  name                 = "pharam_ecr_repo"
+  image_tag_mutability = "MUTABLE"
+  image_scanning_configuration {
+    scan_on_push = true
+  }
+  tags = {
+    Name = "pharam_ecr_repo"
+  }
+}

@@ -1,0 +1,6 @@
+resource "aws_eks_access_entry" "demo" {
+  cluster_name      = aws_eks_cluster.demo.name
+  principal_arn     = aws_iam_role.demo.arn
+  kubernetes_groups = ["group-1", "group-2"]
+  type              = "STANDARD"
+}
