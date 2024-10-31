@@ -32,18 +32,9 @@ jobs:
       with:
         terraform_version: 1.0.0
 
-    - name: Initialize Terraform
-      run: terraform init -reconfigure
-      # env:
-      #   AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-      #   AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-
-    - name: Plan Terraform changes
-      run: terraform plan -out=tfplan -lock=false
+  
 
     # Add a prompt to ask the user whether to apply or destroy changes
     - name: Apply Terraform changes
-      run: terraform apply --auto-approve -lock=false
+      run: terraform destroy --auto-approve -lock=false
 
-    - name: Clean up
-      run: rm tfplan
