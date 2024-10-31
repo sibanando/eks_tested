@@ -1,6 +1,6 @@
 terraform {
   backend "s3" {
-    bucket = "pharam-state"
+    bucket = "testayush"
     key    = "pharma/terraform.tfstate"
     region = "us-west-2"
     encrypt        = true
