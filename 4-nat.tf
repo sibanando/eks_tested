@@ -8,7 +8,7 @@ resource "aws_eip" "pharma_nat" {
 
 resource "aws_nat_gateway" "pharma_nat" {
   allocation_id = aws_eip.pharma_nat.id
-  subnet_id     = aws_subnet.pharma_public-us-east-1a.id
+  subnet_id     = aws_subnet.pharma_public-us-west-2a.id
 
   tags = {
     Name = "pharma_nat"
