@@ -36,7 +36,4 @@ jobs:
 
     # Add a prompt to ask the user whether to apply or destroy changes
     - name: Apply Terraform changes
-      run: terraform destroy --auto-approve 
-
-    - name: Clean up
-      run: rm tfplan
+      run: terraform apply --auto-approve 
