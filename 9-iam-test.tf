@@ -18,11 +18,11 @@ data "aws_iam_policy_document" "test_oidc_assume_role_policy" {
 
 resource "aws_iam_role" "test_oidc" {
   assume_role_policy = data.aws_iam_policy_document.test_oidc_assume_role_policy.json
-  name               = "test-oidc"
+  name               = "test-oidc-1"
 }
 
 resource "aws_iam_policy" "test-policy-1" {
-  name = "test-policy-1"
+  name = "test-policy-01"
 
   policy = jsonencode({
     Statement = [{
